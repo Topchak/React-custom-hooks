@@ -3,8 +3,8 @@ import './App.css';
 
 
 
-const useRandomCounter  = (initialValue) =>{
-    const [value, setValue] = useState(null)
+const useRandomCounter  = (initialValue = 0) =>{
+    const [value, setValue] = useState(initialValue)
 
 
     const generateRandomNumber  = () =>{
@@ -12,7 +12,7 @@ const useRandomCounter  = (initialValue) =>{
     }
 
     useEffect(()=>{
-        setValue(generateRandomNumber )
+        generateRandomNumber()
     },[])
 
 
